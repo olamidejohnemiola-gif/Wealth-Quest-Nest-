@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson - Wealth Quest Nest Coding</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <img src="logo.png" alt="Wealth Quest Nest Logo" class="logo">
+    <h1 id="lesson-title">Lesson</h1>
+  </header>
+
+  <main class="lesson-container">
+    <!-- Lesson Content dynamically injected -->
+    <div id="lesson-content">
+      <p>Loading lesson... ⏳</p>
+    </div>
+
+    <!-- Activity Section -->
+    <div class="activity-section">
+      <h3>Activity / Exercise</h3>
+      <p id="lesson-task">Your activity will appear here.</p>
+      <button onclick="markActivity()">Mark Activity</button>
+    </div>
+
+    <!-- Example Image -->
+    <div class="lesson-image">
+      <h3>Example</h3>
+      <img id="lesson-img" src="Example 1.png" alt="Lesson Example" style="max-width:100%; border-radius:8px;">
+    </div>
+
+    <!-- Navigation -->
+    <div class="lesson-nav">
+      <button id="prev-lesson" onclick="navigateLesson(-1)">⬅ Previous</button>
+      <button id="next-lesson" onclick="navigateLesson(1)">Next ➡</button>
+    </div>
+
+    <!-- Comments -->
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = window.location.pathname + window.location.search;
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://wealth-quest-nest.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Wealth Quest Nest. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
